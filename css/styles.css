@@ -484,6 +484,29 @@ ul { list-style: none; }
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 28px;
+  min-height: 2.2em;
+}
+
+/* Decrypted text effect */
+.decrypt-text {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.decrypt-text__encrypted {
+  color: var(--neon);
+  opacity: 0.7;
+  text-shadow: 0 0 14px rgba(255, 154, 46, 0.2);
+}
+
+.decrypt-text__revealed {
+  color: var(--text);
+  opacity: 1;
+}
+
+.decrypt-text__accent {
+  font-style: italic;
+  color: var(--gold);
 }
 
 .hero__subtitle {
@@ -1289,7 +1312,8 @@ ul { list-style: none; }
     flex-direction: column;
   }
 
-  .hero__actions .btn {
+  .hero__actions .btn,
+  .hero__actions .star-border {
     width: 100%;
   }
 
