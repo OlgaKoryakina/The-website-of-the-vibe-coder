@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ольга Корякина — digital-портфолио. Сайты и web-проекты с акцентом на атмосферу, структуру и восприятие. Web • UX • AI">
+  <meta property="og:title" content="Olga Koryakina — Digital Portfolio">
+  <meta property="og:description" content="Создаю сайты и digital-проекты, где визуал работает вместе со смыслом">
+  <meta property="og:type" content="website">
+  <title>Olga Koryakina — Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-loading">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__mesh"></div>
+    <span class="atmosphere__beam atmosphere__beam--1"></span>
+    <span class="atmosphere__beam atmosphere__beam--2"></span>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="На главную">
+        <span class="logo__mark">OK</span>
+        <span class="logo__text">Olga Koryakina</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#services" class="nav__link">Направления</a>
+        <a href="#projects" class="nav__link">Проекты</a>
+        <a href="#contact" class="nav__link nav__link--cta">Связаться</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+      <a href="#about" class="mobile-menu__link">Обо мне</a>
+      <a href="#services" class="mobile-menu__link">Направления</a>
+      <a href="#approach" class="mobile-menu__link">Подход</a>
+      <a href="#projects" class="mobile-menu__link">Проекты</a>
+      <a href="#contact" class="mobile-menu__link">Контакты</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero section" id="hero">
+      <span class="hero__ghost" aria-hidden="true">Portfolio</span>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow load-in load-in--1">Olga Koryakina / Digital Portfolio / Web • UX • AI</p>
+          <h1 class="hero__title load-in load-in--2">
+            Создаю сайты и digital-проекты, где <em class="accent-line">визуал работает вместе со смыслом</em>
+          </h1>
+          <p class="hero__subtitle load-in load-in--3">
+            Разрабатываю интерфейсы и web-проекты с акцентом на атмосферу, структуру и восприятие.
+            От идеи и подачи — до полноценной реализации.
+          </p>
+          <div class="hero__actions load-in load-in--4">
+            <a href="#projects" class="btn btn--primary">
+              <span>Посмотреть проекты</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#cta" class="btn btn--ghost">Обсудить задачу</a>
+          </div>
+        </div>
+        <div class="hero__visual load-in load-in--5">
+          <p class="hero-photo__badge">Vibe Coder</p>
+          <div class="hero-photo">
+            <span class="hero-photo__corner hero-photo__corner--tl"></span>
+            <span class="hero-photo__corner hero-photo__corner--br"></span>
+            <div class="hero-photo__glow" aria-hidden="true"></div>
+            <figure class="hero-photo__figure">
+              <img
+                src="images/hero-photo.png"
+                alt="Ольга Корякина — digital-дизайнер на фоне неонового города"
+                width="520"
+                height="650"
+                loading="eager"
+                decoding="async"
+              >
+            </figure>
+            <ul class="hero-photo__stats">
+              <li><strong>UX</strong><span>структура</span></li>
+              <li><strong>AI</strong><span>инструменты</span></li>
+              <li><strong>Web</strong><span>реализация</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Прокрутить вниз">
+        <span class="scroll-hint__line"></span>
+      </a>
+    </section>
+
+    <!-- 2. About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Обо мне</span>
+          <h2 class="section-title">Я собираю не просто сайты — а <em class="accent-line">впечатление от проекта</em></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text glass reveal">
+            <p>Меня зовут <strong>Ольга Корякина</strong>.</p>
+            <p>Я работаю на стыке:</p>
+            <ul class="check-list">
+              <li>визуального дизайна;</li>
+              <li>UX;</li>
+              <li>структуры;</li>
+              <li>digital-концепций;</li>
+              <li>AI-инструментов.</li>
+            </ul>
+            <p>Для меня хороший сайт — это не набор секций, а цельная система восприятия.</p>
+          </div>
+          <div class="about-aside reveal reveal--delay">
+            <div class="about-highlight glass">
+              <h3>Важно</h3>
+              <ul>
+                <li>как человек чувствует себя внутри интерфейса;</li>
+                <li>куда направляется внимание;</li>
+                <li>что остаётся в памяти после просмотра.</li>
+              </ul>
+            </div>
+            <div class="about-tags">
+              <span>лендинги</span>
+              <span>портфолио</span>
+              <span>digital-проекты</span>
+              <span>AI-first сайты</span>
+              <span>промо-страницы</span>
+              <span>визуальная упаковка брендов</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Services -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Направления</span>
+          <h2 class="section-title">Что входит в работу</h2>
+        </div>
+        <div class="cards-grid cards-grid--3">
+          <article class="card glass reveal">
+            <span class="card__num">01</span>
+            <h3 class="card__title">Landing Pages</h3>
+            <p class="card__text">Лендинги с сильной подачей, продуманной структурой и современным визуалом.</p>
+          </article>
+          <article class="card glass reveal reveal--delay">
+            <span class="card__num">02</span>
+            <h3 class="card__title">Portfolio Websites</h3>
+            <p class="card__text">Личные сайты и портфолио с акцентом на индивидуальность и стиль.</p>
+          </article>
+          <article class="card glass reveal reveal--delay-2">
+            <span class="card__num">03</span>
+            <h3 class="card__title">Visual Concepts</h3>
+            <p class="card__text">Создание атмосферы проекта: визуальный ритм, настроение и характер.</p>
+          </article>
+          <article class="card glass reveal">
+            <span class="card__num">04</span>
+            <h3 class="card__title">AI &amp; Web</h3>
+            <p class="card__text">Использование AI-инструментов для ускорения процессов и усиления концепции.</p>
+          </article>
+          <article class="card glass reveal reveal--delay">
+            <span class="card__num">05</span>
+            <h3 class="card__title">UX Architecture</h3>
+            <p class="card__text">Проработка структуры, логики блоков и пользовательского сценария.</p>
+          </article>
+          <article class="card glass reveal reveal--delay-2">
+            <span class="card__num">06</span>
+            <h3 class="card__title">Fast Production</h3>
+            <p class="card__text">Быстрый запуск первой сильной версии проекта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Approach -->
+    <section class="section" id="approach">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Подход</span>
+          <h2 class="section-title">Как строится работа</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item glass reveal">
+            <span class="timeline__step">Этап 01</span>
+            <h3>Концепция</h3>
+            <p>Определение атмосферы, визуального языка и общего ощущения проекта.</p>
+          </article>
+          <article class="timeline__item glass reveal reveal--delay">
+            <span class="timeline__step">Этап 02</span>
+            <h3>Структура</h3>
+            <p>Построение логики, UX и последовательности восприятия информации.</p>
+          </article>
+          <article class="timeline__item glass reveal reveal--delay-2">
+            <span class="timeline__step">Этап 03</span>
+            <h3>Реализация</h3>
+            <p>Сборка проекта с учётом визуала, скорости и адаптивности.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Projects -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Портфолио</span>
+          <h2 class="section-title">Избранные проекты</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card project-card--featured reveal">
+            <div class="project-card__image project-card__image--1">
+              <span class="project-card__tag">Landing</span>
+            </div>
+            <div class="project-card__body glass">
+              <h3>AI Product Landing</h3>
+              <p>Современный лендинг для digital-сервиса.</p>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__image project-card__image--2">
+              <span class="project-card__tag">Portfolio</span>
+            </div>
+            <div class="project-card__body glass">
+              <h3>Creative Portfolio</h3>
+              <p>Сайт-портфолио для креативного специалиста.</p>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay-2">
+            <div class="project-card__image project-card__image--3">
+              <span class="project-card__tag">Promo</span>
+            </div>
+            <div class="project-card__body glass">
+              <h3>Funnel Promo Page</h3>
+              <p>Промо-страница с акцентом на конверсию и подачу.</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__image project-card__image--4">
+              <span class="project-card__tag">Concept</span>
+            </div>
+            <div class="project-card__body glass">
+              <h3>AI Creator Concept</h3>
+              <p>Концептуальный сайт с сильным визуальным первым экраном.</p>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__image project-card__image--5">
+              <span class="project-card__tag">Brand</span>
+            </div>
+            <div class="project-card__body glass">
+              <h3>Digital Brand Pack</h3>
+              <p>Визуальная упаковка и промо для digital-бренда.</p>
+            </div>
+          </article>
+          <article class="project-card reveal reveal--delay-2">
+            <div class="project-card__image project-card__image--6">
+              <span class="project-card__tag">UX</span>
+            </div>
+            <div class="project-card__body glass">
+              <h3>Experience Flow</h3>
+              <p>UX-архитектура и интерфейс для AI-first продукта.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Why -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="why-block glass reveal">
+          <div class="why-block__content">
+            <span class="section-tag">Преимущества</span>
+            <h2 class="section-title">Почему проекты выглядят цельно</h2>
+            <p>Подход строится не только вокруг кода и дизайна, но и вокруг восприятия проекта человеком.</p>
+            <div class="why-columns">
+              <div>
+                <h3>Важно</h3>
+                <ul class="check-list">
+                  <li>где удерживается внимание;</li>
+                  <li>как считывается информация;</li>
+                  <li>что создаёт ощущение уровня и качества.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Соединяются</h3>
+                <ul class="check-list">
+                  <li>эстетика;</li>
+                  <li>UX;</li>
+                  <li>структура;</li>
+                  <li>digital-мышление;</li>
+                  <li>скорость реализации.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Tools -->
+    <section class="section section--alt" id="tools">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Стек</span>
+          <h2 class="section-title">Технологии и инструменты</h2>
+        </div>
+        <div class="badges reveal">
+          <span class="badge">ChatGPT</span>
+          <span class="badge">Cursor</span>
+          <span class="badge">React</span>
+          <span class="badge">Next.js</span>
+          <span class="badge">TailwindCSS</span>
+          <span class="badge">Framer Motion</span>
+          <span class="badge">Figma</span>
+          <span class="badge">Supabase</span>
+          <span class="badge">AI Tools</span>
+        </div>
+        <p class="tools-note reveal reveal--delay">
+          Главный инструмент — не только технологии, а умение собирать цельное визуальное впечатление.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8. Audience -->
+    <section class="section" id="audience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Аудитория</span>
+          <h2 class="section-title">Кому подойдёт такой подход</h2>
+        </div>
+        <ul class="audience-list reveal">
+          <li>экспертам;</li>
+          <li>креаторам;</li>
+          <li>digital-брендам;</li>
+          <li>AI-проектам;</li>
+          <li>студиям;</li>
+          <li>личным брендам;</li>
+          <li>тем, кто хочет сайт с характером;</li>
+          <li>тем, кто устал от шаблонных решений.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. Manifest -->
+    <section class="section manifest" id="manifest">
+      <div class="container">
+        <blockquote class="manifest__quote reveal">
+          <p>Сильный сайт — это не просто аккуратная вёрстка.</p>
+          <p>Это ощущение <em class="accent-line">энергии, атмосферы</em> и визуальной целостности проекта.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 10. CTA -->
+    <section class="section section--cta" id="cta">
+      <div class="container">
+        <div class="cta-block glass reveal">
+          <h2 class="cta-block__title">Если нужен современный сайт с сильной подачей — давай обсудим проект</h2>
+          <p class="cta-block__text">
+            Помогу с концепцией, структурой, визуальной упаковкой и реализацией — от идеи до готового digital-продукта.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Написать мне</a>
+            <a href="#projects" class="btn btn--ghost">Посмотреть проекты</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Контакты</span>
+          <h2 class="section-title">Связаться со мной</h2>
+        </div>
+        <div class="contact-grid reveal">
+          <a href="https://t.me/NN_OLGA_KORYAKINA" class="contact-card glass" target="_blank" rel="noopener noreferrer">
+            <span class="contact-card__label">Telegram</span>
+            <span class="contact-card__value">@NN_OLGA_KORYAKINA</span>
+          </a>
+          <a href="mailto:ejevika-888@yandex.ru" class="contact-card glass">
+            <span class="contact-card__label">Email</span>
+            <span class="contact-card__value">ejevika-888@yandex.ru</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Olga Koryakina. Digital Portfolio.</p>
+      <a href="#top" class="footer__top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
