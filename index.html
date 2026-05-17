@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/star-border.css">
+  <link rel="stylesheet" href="css/testimonials.css">
 </head>
 <body class="is-loading">
   <div class="grain" aria-hidden="true"></div>
@@ -32,6 +33,7 @@
         <a href="#about" class="nav__link">Обо мне</a>
         <a href="#services" class="nav__link">Направления</a>
         <a href="#projects" class="nav__link">Проекты</a>
+        <a href="#testimonials" class="nav__link">Отзывы</a>
         <a
           href="#contact"
           class="nav__link nav__link--cta"
@@ -53,6 +55,7 @@
       <a href="#services" class="mobile-menu__link">Направления</a>
       <a href="#approach" class="mobile-menu__link">Подход</a>
       <a href="#projects" class="mobile-menu__link">Проекты</a>
+      <a href="#testimonials" class="mobile-menu__link">Отзывы</a>
       <a href="#contact" class="mobile-menu__link">Контакты</a>
     </nav>
   </div>
@@ -337,7 +340,86 @@
       </div>
     </section>
 
-    <!-- 7. Tools -->
+    <!-- 7. Testimonials -->
+    <section class="section section--alt testimonials" id="testimonials">
+      <div class="container">
+        <div class="testimonials__layout">
+          <div class="testimonials__intro reveal">
+            <div class="section-head">
+              <span class="section-tag">Отзывы</span>
+              <h2 class="section-title">Что говорят после <em class="accent-line">запуска проекта</em></h2>
+            </div>
+            <p class="testimonials__lead">
+              Реальные впечатления от лендингов, портфолио и digital-упаковки — с акцентом на атмосферу, структуру и ощущение от сайта.
+            </p>
+            <p class="testimonials__hint">Свайпните карточку влево или нажмите, чтобы переключить</p>
+          </div>
+          <div class="testimonials__stack-wrap reveal reveal--delay">
+            <div class="testimonials__stack" data-testimonials-stack aria-live="polite">
+              <article class="testimonial-card" data-id="1">
+                <img
+                  class="testimonial-card__avatar"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=256&h=256&fit=crop&crop=faces"
+                  alt="Анна М."
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <blockquote class="testimonial-card__quote">
+                  Сайт наконец передаёт характер бренда — не шаблон, а цельная атмосфера. Клиенты стали дольше оставаться на странице.
+                </blockquote>
+                <footer>
+                  <cite class="testimonial-card__author">Анна М.
+                    <span class="testimonial-card__role">основательница студии wellness</span>
+                  </cite>
+                </footer>
+              </article>
+              <article class="testimonial-card" data-id="2">
+                <img
+                  class="testimonial-card__avatar"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=256&h=256&fit=crop&crop=faces"
+                  alt="Дмитрий К."
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <blockquote class="testimonial-card__quote">
+                  Лендинг собрали быстро, но без ощущения «сделано на скорую руку». Структура понятная, визуал цепляет с первого экрана.
+                </blockquote>
+                <footer>
+                  <cite class="testimonial-card__author">Дмитрий К.
+                    <span class="testimonial-card__role">product lead, AI-стартап</span>
+                  </cite>
+                </footer>
+              </article>
+              <article class="testimonial-card" data-id="3">
+                <img
+                  class="testimonial-card__avatar"
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=256&h=256&fit=crop&crop=faces"
+                  alt="Елена В."
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <blockquote class="testimonial-card__quote">
+                  Портфолио перестало выглядеть как набор блоков — появилось ощущение цельного digital-продукта. Рекомендую тем, кому важен вайб.
+                </blockquote>
+                <footer>
+                  <cite class="testimonial-card__author">Елена В.
+                    <span class="testimonial-card__role">креативный директор, личный бренд</span>
+                  </cite>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Tools -->
     <section class="section section--alt" id="tools">
       <div class="container">
         <div class="section-head reveal">
@@ -443,6 +525,7 @@
 
   <script src="js/decrypted-text.js"></script>
   <script src="js/star-border.js"></script>
+  <script src="js/testimonials.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
