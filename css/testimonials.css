@@ -55,6 +55,27 @@
   margin-left: clamp(-40px, -8vw, -100px);
 }
 
+.testimonials__stack--single {
+  margin-left: 0;
+  height: auto;
+  min-height: 380px;
+}
+
+.testimonials__stack--single .testimonial-card--solo {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: rotate(-4deg);
+  cursor: default;
+  touch-action: auto;
+  user-select: text;
+}
+
+.testimonial-card--solo .testimonial-card__avatar {
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
 .testimonial-card {
   position: absolute;
   left: 0;
@@ -168,6 +189,10 @@
   .testimonials__stack {
     margin-left: 0;
     height: min(420px, 68vh);
+  }
+
+  .testimonials__stack--single .testimonial-card--solo {
+    transform: none;
   }
 }
 
