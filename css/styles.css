@@ -708,7 +708,82 @@ ul { list-style: none; }
   50% { opacity: 1; transform: scaleX(1); }
 }
 
-/* ---- About ---- */
+/* ---- Visiting card (About) ---- */
+.visiting-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.visiting-card__item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: clamp(20px, 3vw, 32px);
+  align-items: start;
+  padding: clamp(24px, 3.5vw, 36px);
+  background: var(--bg);
+  transition: background 0.35s var(--ease);
+}
+
+.visiting-card__item:hover {
+  background: var(--bg-elevated);
+}
+
+.visiting-card__item--contact {
+  border-left: 2px solid var(--gold);
+}
+
+.visiting-card__num {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+  color: rgba(212, 169, 106, 0.35);
+}
+
+.visiting-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.visiting-card__body p {
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+.visiting-card__body strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.visiting-card__body .check-list {
+  margin-top: 4px;
+}
+
+.visiting-card__link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 169, 106, 0.35);
+  text-underline-offset: 3px;
+  transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+.visiting-card__link:hover {
+  color: var(--neon);
+  text-decoration-color: var(--neon);
+}
+
+.visiting-card__project {
+  line-height: 1.65;
+}
+
+/* ---- About (legacy grid, kept for reuse) ---- */
 .about-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -911,6 +986,42 @@ ul { list-style: none; }
 
 .project-card:hover {
   transform: translateY(-6px);
+}
+
+.project-card__link {
+  display: block;
+  color: inherit;
+}
+
+.project-card__external {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color 0.3s;
+}
+
+.project-card:hover .project-card__external {
+  color: var(--neon);
+}
+
+.projects-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+}
+
+.projects-grid--single .project-card--featured {
+  grid-column: span 1;
+}
+
+.projects-grid--single .project-card__image {
+  aspect-ratio: 16 / 8;
+}
+
+.project-card__image--craft {
+  background: linear-gradient(160deg, #1a1410 0%, #3d2e22 35%, #8b6914 70%, #c9a66b 100%);
 }
 
 .project-card__image {
@@ -1294,6 +1405,15 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   :root {
     --container: min(100% - 32px);
+  }
+
+  .visiting-card__item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .visiting-card__num {
+    font-size: 1.25rem;
   }
 
   .nav { display: none; }
