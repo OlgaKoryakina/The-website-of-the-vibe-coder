@@ -20,7 +20,8 @@
 
   function createHeroDecrypt() {
     var el = document.querySelector(".hero__title .decrypt-text");
-    if (!el || typeof DecryptedText === "undefined" || heroDecrypt) return;
+    if (!el || typeof DecryptedText === "undefined") return;
+    if (heroDecrypt) return;
 
     heroDecrypt = new DecryptedText(el, {
       animateOn: "load",
@@ -46,17 +47,55 @@
 
   document.addEventListener("DOMContentLoaded", createHeroDecrypt);
 
-  if (prefersReduced) {
-    document.body.classList.remove("is-loading");
-    document.body.classList.add("is-ready");
-    document.querySelectorAll(".reveal").forEach(function (el) {
-      el.classList.add("is-visible");
-    });
-    startHeroDecrypt();
-  } else {
-    window.addEventListener("load", initPageLoad);
-    setTimeout(initPageLoad, 2800);
+  function bootPage() {
+    if (prefersReduced) {
+      document.body.classList.remove("is-loading");
+      document.body.classList.add("is-ready");
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+      startHeroDecrypt();
+    } else {
+      window.addEventListener("load", initPageLoad);
+      setTimeout(initPageLoad, 2800);
+    }
   }
+
+  document.addEventListener("siteContentLoaded", function () {
+    heroDecrypt = null;
+    createHeroDecrypt();
+    initReveal();
+    if (typeof window.initTestimonials === "function") {
+      window.initTestimonials();
+    }
+  });
+
+  function initReveal() {
+    const revealEls = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && revealEls.length) {
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
+      );
+      revealEls.forEach(function (el) {
+        if (!el.classList.contains("is-visible")) observer.observe(el);
+      });
+    } else {
+      revealEls.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    }
+  }
+
+  bootPage();
+  initReveal();
 
   /* Header on scroll */
   function onScroll() {
@@ -103,31 +142,6 @@
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
-    });
-  }
-
-  /* Scroll reveal */
-  const revealEls = document.querySelectorAll(".reveal");
-
-  if ("IntersectionObserver" in window && revealEls.length) {
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
-    );
-
-    revealEls.forEach(function (el) {
-      observer.observe(el);
-    });
-  } else {
-    revealEls.forEach(function (el) {
-      el.classList.add("is-visible");
     });
   }
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель — Olga Koryakina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+  <div id="login-screen" class="login-screen">
+    <form class="login-card" id="login-form">
+      <h1>Админ-панель</h1>
+      <p class="login-card__sub">Olga Koryakina — управление сайтом</p>
+      <label class="field">
+        <span>Логин</span>
+        <input type="text" name="username" autocomplete="username" required>
+      </label>
+      <label class="field">
+        <span>Пароль</span>
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <p class="form-error" id="login-error" hidden></p>
+      <button type="submit" class="btn btn--primary">Войти</button>
+    </form>
+  </div>
+
+  <div id="admin-app" class="admin-app" hidden>
+    <aside class="sidebar">
+      <div class="sidebar__head">
+        <strong>OK Admin</strong>
+        <a href="/" target="_blank" class="sidebar__link">Открыть сайт ↗</a>
+      </div>
+      <nav class="sidebar__nav" id="section-nav">
+        <button type="button" data-section="meta">SEO и шапка</button>
+        <button type="button" data-section="hero">Hero</button>
+        <button type="button" data-section="about">Обо мне</button>
+        <button type="button" data-section="services">Направления</button>
+        <button type="button" data-section="approach">Подход</button>
+        <button type="button" data-section="projects">Проекты</button>
+        <button type="button" data-section="why">Преимущества</button>
+        <button type="button" data-section="testimonials">Отзывы</button>
+        <button type="button" data-section="tools">Стек</button>
+        <button type="button" data-section="audience">Аудитория</button>
+        <button type="button" data-section="manifest">Манифест</button>
+        <button type="button" data-section="cta">CTA</button>
+        <button type="button" data-section="contact">Контакты</button>
+        <button type="button" data-section="footer">Подвал</button>
+      </nav>
+      <button type="button" class="btn btn--ghost sidebar__logout" id="logout-btn">Выйти</button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <h2 id="section-title">SEO и шапка</h2>
+        <div class="admin-header__actions">
+          <span class="save-status" id="save-status"></span>
+          <button type="button" class="btn btn--primary" id="save-btn">Сохранить изменения</button>
+        </div>
+      </header>
+      <div class="admin-content" id="admin-panels"></div>
+    </main>
+  </div>
+
+  <template id="tpl-list-item">
+    <div class="list-item">
+      <input type="text" class="list-item__input">
+      <button type="button" class="btn btn--small btn--danger list-item__remove">×</button>
+    </div>
+  </template>
+
+  <script src="/admin/js/admin.js"></script>
+</body>
+</html>

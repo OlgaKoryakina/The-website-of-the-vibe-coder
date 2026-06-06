@@ -76,6 +76,11 @@
   object-fit: cover;
 }
 
+.testimonial-card__video {
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
 .testimonial-card {
   position: absolute;
   left: 0;
